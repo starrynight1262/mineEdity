@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeric Beh | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Parallax Background -->
+    <div class="parallax-bg">
+        <div class="bg-circle" style="top: 20%; left: 10%;"></div>
+        <div class="bg-circle" style="top: 60%; right: 15%; width: 150px; height: 150px;"></div>
+        <div class="bg-circle" style="bottom: 20%; left: 20%; width: 80px; height: 80px;"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="index.html" class="logo">JERIC BEH</a>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content hidden">
+                <h1 class="hero-title">INNOVATING <span>THROUGH TECHNOLOGY</span></h1>
+                <h2 class="hero-subtitle">Jeric Beh | ECE Engineer</h2>
+                <div class="hero-tags">
+                    <span class="tag">Full Stack Developer</span>
+                    <span class="tag">Hardware Designer</span>
+                    <span class="tag">Data Engineer</span>
+                </div>
+                <p class="hero-description">
+                    Electronic & Computer Engineering graduate passionate about creating innovative solutions 
+                    that bridge hardware and software worlds.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">View Projects</a>
+                    <a href="contact.html" class="btn">Contact Me</a>
+                    <a href="assets/resume.pdf" class="btn" download="Jeric_Beh_Resume.pdf">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-image hidden">
+                <!-- Add your picture here -->
+                <div class="profile-picture-placeholder">
+                    <img src="assets/images/unnamed.jpg" alt="Jeric Beh" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Services -->
+        <section class="services hidden">
+            <h2 class="section-title">Expertise</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and scalable solutions with cutting-edge technologies.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>IoT Solutions</h3>
+                    <p>Building smart environment monitoring and automation systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>AI & Data Analysis</h3>
+                    <p>Implementing smart solutions for data-driven problems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How I Work -->
+        <section id="work" class="how-i-work">
+            <h2 class="section-title hidden">How I Work</h2>
+            <div class="work-steps">
+                <div class="step hidden">
+                    <div class="step-icon"><i class="fas fa-search"></i></div>
+                    <h3>Research & Planning</h3>
+                    <p>Understanding requirements and planning thorough solutions.</p>
+                </div>
+                <div class="step hidden">
+                    <div class="step-icon"><i class="fas fa-code"></i></div>
+                    <h3>Design & Development</h3>
+                    <p>Creating efficient and scalable solutions with modern technologies.</p>
+                </div>
+                <div class="step hidden">
+                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Testing & Optimization</h3>
+                    <p>Ensuring quality and performance through rigorous testing.</p>
+                </div>
+                <div class="step hidden">
+                    <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Deployment & Support</h3>
+                    <p>Delivering and maintaining reliable solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta hidden">
+            <div class="cta-content">
+                <h2>Let's Work Together</h2>
+                <p>Looking for innovative solutions for your next project?</p>
+                <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="contact-info">
+                <a href="mailto:jericbeh@gmail.com"><i class="fas fa-envelope"></i> jericbeh@gmail.com</a>
+                <a href="tel:+6583283372"><i class="fas fa-phone"></i> +65 8328 3372</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Singapore</a>
+                <a href="https://www.linkedin.com/in/jeric-beh-b85b71353/?originalSubdomain=sg" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/starrynight1262" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <p>&copy; 2026 Jeric Beh. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Scroll Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        });
+
+        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const parallax = document.querySelector('.parallax-bg');
+            let scrollPosition = window.pageYOffset;
+            parallax.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>

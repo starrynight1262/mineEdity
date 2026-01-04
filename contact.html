@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeric Beh | Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">JERIC.BEH</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </header>
+
+        <section class="contact-section">
+            <h1 class="section-title">Let's Work Together</h1>
+            <p style="margin-bottom: 40px; color: #8892b0;">Looking for innovative solutions for your next project? Get in touch!</p>
+            
+            <div class="contact-container">
+                <div class="contact-info-side">
+                    <h2 style="color: #64ffda; margin-bottom: 30px;">Contact Information</h2>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="color: #ccd6f6; margin-bottom: 10px;"><i class="fas fa-envelope"></i> Email</h3>
+                        <a href="mailto:jericbeh@gmail.com" style="color: #64ffda; text-decoration: none;">jericbeh@gmail.com</a>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="color: #ccd6f6; margin-bottom: 10px;"><i class="fas fa-phone"></i> Phone</h3>
+                        <a href="tel:+6583283372" style="color: #64ffda; text-decoration: none;">+65 8328 3372</a>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="color: #ccd6f6; margin-bottom: 10px;"><i class="fas fa-map-marker-alt"></i> Location</h3>
+                        <p>Singapore</p>
+                    </div>
+                    
+                    <div>
+                        <h3 style="color: #ccd6f6; margin-bottom: 15px;">Availability</h3>
+                        <p>Open to freelance projects, internships, and full-time opportunities in:</p>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Electronic Engineering</li>
+                            <li>Full-Stack Development</li>
+                            <li>Embedded Systems</li>
+                            <li>IoT Solutions</li>
+                            <li>Data Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2 style="color: #64ffda; margin-bottom: 30px;">Send a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="contact-info">
+                <a href="mailto:jericbeh@gmail.com"><i class="fas fa-envelope"></i> jericbeh@gmail.com</a>
+                <a href="tel:+6583283372"><i class="fas fa-phone"></i> +65 8328 3372</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Singapore</a>
+            </div>
+            <p>&copy; 2024 Jeric Beh. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
