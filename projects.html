@@ -69,6 +69,23 @@
             margin: 0;
         }
         
+        .project-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
         .project-content {
             padding: 30px;
         }
@@ -213,6 +230,33 @@
             font-size: 14px;
         }
         
+        /* Image Gallery Styles */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #233554;
+        }
+        
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-image:hover img {
+            transform: scale(1.1);
+        }
+        
         .full-details {
             display: none;
         }
@@ -251,6 +295,10 @@
                 width: 95%;
                 margin: 20px auto;
             }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -279,22 +327,25 @@
                         <i class="fas fa-laptop-code"></i>
                         <h3>Web Design</h3>
                     </div>
+                    <div class="project-image">
+                        <img src="images/mala-web-design.jpg" alt="Mala Hotpot Store Website">
+                    </div>
                     <div class="project-content">
-                        <h4 class="project-title">Curry House Online Ordering System</h4>
-                        <p class="project-description">A complete online ordering platform for a curry restaurant in South Canteen. Built with focus on user experience and performance.</p>
+                        <h4 class="project-title">Mala Hotpot Store Website</h4>
+                        <p class="project-description">A complete online ordering platform for a Mala Hotpot restaurant. Built with HTML, CSS, and JavaScript for optimal user experience.</p>
                         
                         <div class="project-features">
                             <div class="feature-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Interactive menu display with real-time updates</span>
+                                <span>Interactive menu with spice level customization</span>
                             </div>
                             <div class="feature-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Secure user account system with authentication</span>
+                                <span>Mobile-responsive design for all devices</span>
                             </div>
                             <div class="feature-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Order management dashboard for admin</span>
+                                <span>Real-time order calculation and cart system</span>
                             </div>
                         </div>
                         
@@ -395,22 +446,25 @@
                         <i class="fas fa-seedling"></i>
                         <h3>Agriculture System</h3>
                     </div>
+                    <div class="project-image">
+                        <img src="images/m5stack-plant-care.jpg" alt="M5 Stack Plant Care System">
+                    </div>
                     <div class="project-content">
-                        <h4 class="project-title">Smart Hydroponic Monitoring System</h4>
-                        <p class="project-description">IoT-based automated hydroponic farming system with real-time monitoring and control capabilities.</p>
+                        <h4 class="project-title">M5 Stack Plant Care System</h4>
+                        <p class="project-description">Automated plant monitoring system using M5 Stack with block-based programming for soil moisture, temperature, and light control.</p>
                         
                         <div class="project-features">
                             <div class="feature-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Real-time pH and nutrient level monitoring</span>
+                                <span>Real-time soil moisture and temperature monitoring</span>
                             </div>
                             <div class="feature-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Automated nutrient dosing system</span>
+                                <span>Block-based programming with UIFlow</span>
                             </div>
                             <div class="feature-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Mobile app for remote monitoring</span>
+                                <span>Automated watering system with pump control</span>
                             </div>
                         </div>
                         
@@ -424,22 +478,25 @@
                         <i class="fas fa-home"></i>
                         <h3>IoT Solutions</h3>
                     </div>
+                    <div class="project-image">
+                        <img src="images/beaglebone-dashboard.jpg" alt="BeagleBone IoT Dashboard">
+                    </div>
                     <div class="project-content">
-                        <h4 class="project-title">Smart Home Automation System</h4>
-                        <p class="project-description">Complete home automation solution with energy monitoring, security, and voice control integration.</p>
+                        <h4 class="project-title">BeagleBone Embedded Dashboard</h4>
+                        <p class="project-description">Embedded system using BeagleBone with Putty, Python, and HTML to build a real-time online monitoring dashboard.</p>
                         
                         <div class="project-features">
                             <div class="feature-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Energy consumption monitoring and optimization</span>
+                                <span>BeagleBone Black as embedded controller</span>
                             </div>
                             <div class="feature-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Security system with motion detection</span>
+                                <span>Python backend with Flask web server</span>
                             </div>
                             <div class="feature-item">
                                 <i class="fas fa-check-circle"></i>
-                                <span>Voice control with Google Assistant/Alexa</span>
+                                <span>Real-time data visualization dashboard</span>
                             </div>
                         </div>
                         
@@ -466,12 +523,27 @@
         <div class="modal-content">
             <div class="modal-header" style="background: linear-gradient(135deg, #ff6b6b, #0a192f);">
                 <button class="close-modal" onclick="closeModal('modal1')">&times;</button>
-                <h2>Curry House Online Ordering System</h2>
+                <h2>Mala Hotpot Store Website</h2>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Project Overview</h3>
-                    <p>A comprehensive online ordering platform designed specifically for Curry House restaurant located in South Canteen. The system streamlines the ordering process, improves customer experience, and provides restaurant owners with efficient order management tools.</p>
+                    <p>A complete HTML/CSS/JavaScript website for a Mala Hotpot restaurant, featuring an interactive menu, online ordering system, and responsive design.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Images</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-image">
+                            <img src="images/mala-homepage.jpg" alt="Mala Website Homepage">
+                        </div>
+                        <div class="gallery-image">
+                            <img src="images/mala-menu.jpg" alt="Interactive Menu">
+                        </div>
+                        <div class="gallery-image">
+                            <img src="images/mala-order.jpg" alt="Order System">
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="modal-section">
@@ -479,46 +551,46 @@
                     <div class="project-features">
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Interactive menu with real-time availability updates</span>
+                            <span>Interactive menu with spice level customization (微辣, 中辣, 大辣)</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Secure user authentication and registration system</span>
+                            <span>Real-time price calculation as customers select ingredients</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Order tracking with real-time status updates</span>
+                            <span>Mobile-responsive design that works on all devices</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Payment gateway integration (Stripe/PayPal)</span>
+                            <span>Order summary and printable receipt generation</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="modal-section">
                     <h3>Technical Implementation</h3>
-                    <p>Built using React.js for the frontend with Redux for state management. Backend powered by Node.js and Express with MongoDB database. Implements RESTful API architecture and follows responsive design principles.</p>
+                    <p>Pure HTML5, CSS3, and vanilla JavaScript implementation. No frameworks used to ensure fast loading times and compatibility. CSS Grid and Flexbox for responsive layouts.</p>
                     
                     <div class="tech-stack">
-                        <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">Redux</span>
-                        <span class="tech-tag">Stripe API</span>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSS Grid</span>
+                        <span class="tech-tag">Flexbox</span>
+                        <span class="tech-tag">Responsive Design</span>
                     </div>
                 </div>
                 
                 <div class="full-details" id="fullDetails1">
                     <div class="modal-section">
-                        <h3>Project Challenges & Solutions</h3>
-                        <p>One major challenge was handling concurrent orders during peak hours. Implemented a queue-based order processing system that manages load efficiently. Another challenge was real-time inventory updates - solved using WebSocket connections for instant updates.</p>
+                        <h3>Implementation Details</h3>
+                        <p>The website includes a 3-step ordering process: 1) Choose soup base and spice level, 2) Select ingredients from categorized sections (meat, vegetables, noodles, etc.), 3) Review order and checkout. Each ingredient has dynamic pricing that updates the total in real-time.</p>
                     </div>
                     
                     <div class="modal-section">
-                        <h3>Results & Impact</h3>
-                        <p>The system reduced order processing time by 40% and increased customer satisfaction by 60%. Restaurant reported 30% increase in online orders within first month of implementation.</p>
+                        <h3>Design Challenges</h3>
+                        <p>Major challenge was creating an intuitive interface for complex ingredient selection. Implemented a category-based selection system with visual feedback. Another challenge was ensuring the website loaded quickly on mobile devices - achieved by optimizing images and minimizing JavaScript.</p>
                     </div>
                 </div>
                 
@@ -742,12 +814,27 @@
         <div class="modal-content">
             <div class="modal-header" style="background: linear-gradient(135deg, #2ecc71, #0a192f);">
                 <button class="close-modal" onclick="closeModal('modal5')">&times;</button>
-                <h2>Smart Hydroponic Monitoring System</h2>
+                <h2>M5 Stack Plant Care System</h2>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Project Overview</h3>
-                    <p>An IoT-based automated hydroponic farming system that monitors and controls plant growth parameters in real-time, optimizing yield and resource usage.</p>
+                    <p>An automated plant monitoring and care system using M5 Stack devices with block-based programming (UIFlow) to monitor soil conditions and automate watering.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Images</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-image">
+                            <img src="images/m5stack-setup.jpg" alt="M5 Stack Setup">
+                        </div>
+                        <div class="gallery-image">
+                            <img src="images/plant-sensors.jpg" alt="Soil Sensors">
+                        </div>
+                        <div class="gallery-image">
+                            <img src="images/block-code.jpg" alt="Block Programming">
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="modal-section">
@@ -755,46 +842,46 @@
                     <div class="project-features">
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Real-time pH, EC, and nutrient level monitoring</span>
+                            <span>Real-time soil moisture monitoring with capacitive sensors</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Automated nutrient dosing with peristaltic pumps</span>
+                            <span>Temperature and humidity tracking using DHT11 sensor</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Mobile app for remote monitoring and control</span>
+                            <span>Automated watering system with peristaltic pump control</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Climate control (temperature, humidity, light cycles)</span>
+                            <span>Block-based programming using M5 Stack UIFlow</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="modal-section">
                     <h3>System Architecture</h3>
-                    <p>Uses Raspberry Pi as central controller with Arduino nodes for sensor data collection. Cloud backend for data storage and analysis. Mobile app built with React Native for cross-platform compatibility.</p>
+                    <p>M5 Stack Core2 as the main controller with Grove soil moisture sensor and DHT11 temperature/humidity sensor. Water pump controlled via relay module. Programming done using UIFlow's block-based interface with custom logic blocks.</p>
                     
                     <div class="tech-stack">
-                        <span class="tech-tag">Raspberry Pi</span>
-                        <span class="tech-tag">Arduino</span>
-                        <span class="tech-tag">React Native</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MQTT</span>
-                        <span class="tech-tag">Sensor Networks</span>
+                        <span class="tech-tag">M5 Stack Core2</span>
+                        <span class="tech-tag">UIFlow</span>
+                        <span class="tech-tag">Block Programming</span>
+                        <span class="tech-tag">Soil Moisture Sensor</span>
+                        <span class="tech-tag">DHT11</span>
+                        <span class="tech-tag">Relay Control</span>
                     </div>
                 </div>
                 
                 <div class="full-details" id="fullDetails5">
                     <div class="modal-section">
-                        <h3>Control Algorithms</h3>
-                        <p>Implemented PID controllers for precise nutrient dosing and climate control. Machine learning algorithms analyze plant growth patterns to optimize nutrient mixtures and light cycles.</p>
+                        <h3>Programming Logic</h3>
+                        <p>Implemented using UIFlow's visual programming blocks: When soil moisture drops below 30%, activate pump for 5 seconds. When temperature exceeds 35°C, send alert notification. Data logged to M5 Stack SD card for analysis.</p>
                     </div>
                     
                     <div class="modal-section">
                         <h3>Results & Benefits</h3>
-                        <p>Increased crop yield by 40% compared to traditional methods. Reduced water usage by 70% and nutrient waste by 60%. System can be scaled from small home setups to commercial farms.</p>
+                        <p>Maintained optimal soil moisture levels (±5% accuracy). Reduced water usage by 40% compared to manual watering. Plants showed 25% better growth rate with consistent conditions. System can run autonomously for 2 weeks on battery.</p>
                     </div>
                 </div>
                 
@@ -811,12 +898,27 @@
         <div class="modal-content">
             <div class="modal-header" style="background: linear-gradient(135deg, #3498db, #0a192f);">
                 <button class="close-modal" onclick="closeModal('modal6')">&times;</button>
-                <h2>Smart Home Automation System</h2>
+                <h2>BeagleBone Embedded Dashboard</h2>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Project Overview</h3>
-                    <p>A comprehensive smart home automation system that integrates energy management, security, and comfort controls into a unified platform with voice control capabilities.</p>
+                    <p>Embedded IoT system using BeagleBone Black running Python Flask server with HTML dashboard for real-time sensor monitoring and control through web interface.</p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Images</h3>
+                    <div class="image-gallery">
+                        <div class="gallery-image">
+                            <img src="images/beaglebone-setup.jpg" alt="BeagleBone Setup">
+                        </div>
+                        <div class="gallery-image">
+                            <img src="images/putty-terminal.jpg" alt="Putty Terminal">
+                        </div>
+                        <div class="gallery-image">
+                            <img src="images/dashboard-ui.jpg" alt="Dashboard UI">
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="modal-section">
@@ -824,46 +926,46 @@
                     <div class="project-features">
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Energy consumption monitoring and optimization</span>
+                            <span>BeagleBone Black as embedded Linux server</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Security system with motion detection and cameras</span>
+                            <span>Remote access via Putty SSH terminal</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Voice control with Google Assistant and Alexa</span>
+                            <span>Python Flask backend for web server</span>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-check"></i>
-                            <span>Automated lighting and climate control</span>
+                            <span>Real-time HTML dashboard with Chart.js visualizations</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="modal-section">
                     <h3>System Architecture</h3>
-                    <p>Central hub running on Raspberry Pi with Home Assistant. Z-Wave and Zigbee for device communication. ESP32-based custom sensors. Cloud integration for remote access and data analytics.</p>
+                    <p>BeagleBone Black running Debian Linux with Python 3. Flask web server handles HTTP requests and serves HTML/CSS/JS dashboard. GPIO pins read sensor data (DHT22, light sensor). Data updates in real-time via AJAX calls.</p>
                     
                     <div class="tech-stack">
-                        <span class="tech-tag">Home Assistant</span>
-                        <span class="tech-tag">Raspberry Pi</span>
-                        <span class="tech-tag">ESP32</span>
-                        <span class="tech-tag">Z-Wave/Zigbee</span>
-                        <span class="tech-tag">Node-RED</span>
-                        <span class="tech-tag">MQTT</span>
+                        <span class="tech-tag">BeagleBone Black</span>
+                        <span class="tech-tag">Python Flask</span>
+                        <span class="tech-tag">HTML/CSS/JS</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">Putty SSH</span>
+                        <span class="tech-tag">GPIO Control</span>
                     </div>
                 </div>
                 
                 <div class="full-details" id="fullDetails6">
                     <div class="modal-section">
-                        <h3>Energy Optimization</h3>
-                        <p>Implemented machine learning algorithms that learn user patterns to optimize energy usage. System can predict when to pre-heat/cool rooms and automatically turn off unused devices.</p>
+                        <h3>Implementation Details</h3>
+                        <p>System accessed via Putty SSH terminal for initial setup and debugging. Python script runs continuously, reading sensors every 10 seconds. Flask server provides REST API endpoints for frontend. Dashboard uses AJAX to poll data every 5 seconds. Control buttons trigger GPIO outputs for relays/LEDs.</p>
                     </div>
                     
                     <div class="modal-section">
-                        <h3>Security Features</h3>
-                        <p>Multi-layered security including motion detection, door/window sensors, and camera integration with facial recognition. All data is encrypted and system includes intrusion detection alerts.</p>
+                        <h3>Technical Challenges</h3>
+                        <p>Challenge 1: Setting up Flask to run on boot - solved with systemd service. Challenge 2: Real-time updates without page refresh - solved with JavaScript setInterval() and AJAX. Challenge 3: GPIO permission issues - solved with udev rules configuration.</p>
                     </div>
                 </div>
                 
@@ -875,7 +977,7 @@
         </div>
     </div>
 
-        <script>
+    <script>
         // Modal Functions
         function openModal(modalId) {
             document.getElementById(modalId).style.display = 'block';
