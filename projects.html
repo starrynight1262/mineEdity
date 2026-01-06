@@ -257,6 +257,23 @@
             transform: scale(1.1);
         }
         
+        /* Video Styles */
+        .video-container {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #0a192f;
+            border: 1px solid #233554;
+        }
+        
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
         .full-details {
             display: none;
         }
@@ -809,7 +826,7 @@
         </div>
     </div>
 
-    <!-- Agriculture System Modal -->
+    <!-- Agriculture System Modal WITH VIDEO -->
     <div id="modal5" class="modal">
         <div class="modal-content">
             <div class="modal-header" style="background: linear-gradient(135deg, #2ecc71, #0a192f);">
@@ -836,6 +853,22 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- VIDEO SECTION ADDED HERE -->
+                <div class="modal-section">
+                    <h3>System Demonstration</h3>
+                    <div class="video-container">
+                        <video controls>
+                            <source src="assets/videos/YTDown.com_YouTube_EGC177-C2-GROUP4-Smart-Plant-Monitor-for_Media_Rrjmib6L5Uc_001_720p.mp4" type="video/mp4">
+                            <source src="assets/videos/plant-care.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p style="color: #8892b0; font-size: 14px; text-align: center; margin-top: 10px;">
+                        Watch the M5 Stack Plant Care System in action
+                    </p>
+                </div>
+                <!-- END VIDEO SECTION -->
                 
                 <div class="modal-section">
                     <h3>Key Features</h3>
@@ -893,7 +926,7 @@
         </div>
     </div>
 
-    <!-- IoT Solutions Modal -->
+    <!-- IoT Solutions Modal WITH VIDEO -->
     <div id="modal6" class="modal">
         <div class="modal-content">
             <div class="modal-header" style="background: linear-gradient(135deg, #3498db, #0a192f);">
@@ -920,6 +953,22 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- VIDEO SECTION ADDED HERE -->
+                <div class="modal-section">
+                    <h3>Dashboard Demo</h3>
+                    <div class="video-container">
+                        <video controls>
+                            <source src="assets/videos/beaglebone-demo.mp4" type="video/mp4">
+                            <source src="assets/videos/beaglebone-demo.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p style="color: #8892b0; font-size: 14px; text-align: center; margin-top: 10px;">
+                        BeagleBone Dashboard real-time demonstration
+                    </p>
+                </div>
+                <!-- END VIDEO SECTION -->
                 
                 <div class="modal-section">
                     <h3>Key Features</h3>
